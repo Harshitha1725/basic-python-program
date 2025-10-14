@@ -1,0 +1,11 @@
+# streak_tracker.py
+from datetime import datetime
+
+def log_streak():
+    today = datetime.now().strftime("%Y-%m-%d")
+    with open("streak.txt", "a") as f:
+        f.write(f"{today}\n")
+    print(f"Logged streak for {today}!")
+
+if __name__ == "__main__":
+    log_streak()
